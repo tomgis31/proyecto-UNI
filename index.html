@@ -56,6 +56,7 @@
         <script src="js/Autolinker.min.js"></script>
         <script src="js/rbush.min.js"></script>
         <script src="js/labelgun.min.js"></script>
+		<script src="js/L.Control.Locate.min.js"></script>
         <script src="js/labels.js"></script>
         <script src="data/zonas_1.js"></script>
         <script src="data/alero_2.js"></script>
@@ -707,6 +708,19 @@
           });
         }
         
+		 var lc = L.control.locate({
+      position: 'topleft',
+      showPopup: true,
+      strings: {
+          title: "Geolocalizacion"
+      },
+      locateOptions: {
+        enableHighAccuracy: true
+      },
+      drawCircle: false,  
+      //circleStyle:{weight: 10}
+      
+    }).addTo(map);
         </script>
     </body>
 </html>
